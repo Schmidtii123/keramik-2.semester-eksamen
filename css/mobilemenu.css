@@ -1,0 +1,126 @@
+/* Mobil styling */
+.navigation__container {
+    background: var(--beige);
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgba(34, 56, 178, 0.21);
+    z-index: 1;
+    direction: rtl;
+}
+
+.mobileiconlabel {
+    display: inline-block;
+    position: relative;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 20px 10px;
+    z-index: 2;
+    color: black;
+    right: 0;
+}
+
+.menuitem {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.active_menuitem {
+    background: var(--orange, #F4AB58);
+    color: white;
+    border-radius: 5px;
+}
+
+/* Hide checkbox and menuitems until clicked */
+.menuitems__container,
+.mobileicon {
+    display: none;
+}
+
+/* Vis menuen når menu-ikonet bliver trykker på */
+.navigation__container input:checked ~ .menuitems__container {
+    display: block;
+    background-color: var(--beige);
+
+}
+
+.pil {
+    height: 0.8rem;
+    width: 0.8rem;
+    position: absolute;
+    display: inline;
+    top: 0;
+    right: 0;
+    padding: 13px 10px;
+    z-index: auto;
+}  
+
+/* COMPUTER LAYOUT*/
+@media screen and (min-width: 900px) {
+
+    /* Hide Mobile icon and its label */
+    .mobileiconlabel,
+    .mobileicon {
+        display: none;
+    }
+
+    .dropdown {
+        border: none;
+    }
+
+    .dropdown_content a:hover {
+        border-radius: 5px;
+    }
+
+    .dropdown_content {
+        display: none;
+        position: absolute;
+        background-color: var(--beige);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+    
+    /* får menupunkterne til at display flex, standard row */
+    .menuitems__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+    /* rykker menupunkterne til flexend, så der er plads til logo */
+    .navigation__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 3.5rem;
+        direction: ltr;
+    }
+
+    /* rykker logo over i venstre side */
+    .logo {
+        justify-content: flex-start;
+        margin-top: 0;
+        margin-left: 1rem;
+        transform: translateY(-0.25rem);
+    }
+
+    .menuitem {
+        width: auto;
+        margin-right: 2rem;
+    }
+
+    .menuitem:hover {
+        background-color: var(--orange, #F4AB58);
+        color: white;
+        cursor: pointer;
+        position: relative;
+        border-radius: 5px;
+    } 
+}

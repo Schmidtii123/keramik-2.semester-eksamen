@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forsiden til Den Gamle Slagter Keramik">
+    <title>Forside | Den Gamle Slagter Keramik</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.webp">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobilemenu.css">
+</head>
+
+<body>
+    <header class="navigation__container">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img class="logo_billede" src="img/logo.webp"
+                        alt="Den gamle Slagter Keramik Logo"></a>
+                <a href="index.html" class="logo_text noto">Den Gamle Slagter Keramik</a>
+            </div>
+
+            <!-- The mobile menu icon -->
+            <label for="mobileicon" class="mobileiconlabel">&#9776;</label>
+            <input type="checkbox" id="mobileicon" class="mobileicon">
+
+
+            <!-- Menu items og dropdown hover fra w3schools-->
+            <div class="menuitems__container">
+                <div class="dropdown">
+                    <a class="menuitem quicksand" href="keramikerne.html">Keramikerne</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a class="quicksand" href="emil.html">Emil </a>
+                            <a class="quicksand" href="henrik.html">Henrik</a>
+                            <a class="quicksand" href="lisette.html">Lisette</a>
+                            <a class="quicksand" href="404.html">Sabrine</a>
+                            <a class="quicksand" href="thea.html">Thea</a>
+                            <a class="quicksand" href="404.html">Zylle</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="menuitem quicksand" href="workshops.html">Workshops</a>
+                </div>
+
+                <div class="dropdown">
+                    <a class="menuitem quicksand" href="vores_historie.html">Vores Historie</a>
+                </div>
+
+                <div class="dropdown">
+                    <a class="menuitem quicksand" href="kontakt_os.html">Kontakt os</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!---FORSIDEN-->
+    <section class="section_video">
+        <video autoplay muted loop playsinline class="video" src="media/forside_video.mp4"></video>
+        <div class="video_overlay">
+            <div class="video_overlay_text">
+                <h1 class="velkommen_tekst1 hvid noto"> Velkommen til </h1>
+                <h2 class="velkommen_tekst2 hvid noto"> Den Gamle Slagter Keramik </h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="row">
+
+        <a href="keramikerne.html">
+            <div class="box hover">
+                <img class="box_pic" src="img/faellesbillede.webp" alt="Fællesbillede af keramikerne">
+                <div class="box_text quicksand hvid">Keramikerne </div>
+            </div>
+        </a>
+
+        <a href="workshops.html">
+            <div class="box hover">
+                <img class="box_pic" src="img/workshop.webp" alt="workshop billede baggrund">
+                <div class="box_text quicksand hvid">Workshops </div>
+            </div>
+        </a>
+
+        <a href="vores_historie.html">
+            <div class="box hover">
+                <img class="box_pic" src="img/vores_historie.webp" alt="vores historie billede baggrund">
+                <div class="box_text quicksand hvid">Vores Historie </div>
+            </div>
+        </a>
+
+        <a href="kontakt_os.html">
+            <div class="box hover">
+                <img class="box_pic" src="img/kontakt_os.webp" alt="kontakt os billede baggrund">
+                <div class="box_text quicksand hvid">Kontakt os</div>
+            </div>
+        </a>
+
+    </div>
+
+    <!---FOOTER-->
+    <footer>
+        <section class="footer">
+            <div class="footer_card noto">
+                <h3>Kontakt:</h3>
+                <div class="footer_instagram">
+                    <img src="img/instagram_logo.webp" alt="Instgram">
+                    <a href="https://www.instagram.com/den_gamle_slagter_keramik/">@den_gamle_slager_keramik</a>
+                </div>
+
+            </div>
+            <div class="footer_card noto">
+                <h3>Åbningstider:</h3>
+                
+                <p>Mandag: Lukket</p>
+                <br>
+                <p>Tirsdag - torsdag: 12:00 - 17:30</p>
+                <br>
+                <p>Fredag: Lukket</p>
+                <br>
+                <p>Weekender: Lukket</p>
+            </div>
+            <div class="footer_card noto">
+                <h3>Adresse:</h3>
+                <div class="footer_lokation">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <p>Vesterbrogade 2, 8000 Aarhus C</p>
+                </div>
+                    <!---GOOGLE MAPS-->
+                <div class="footer_map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2221.935895027396!2d10.19554431594628!3d56.15821298066375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3feb5b8eed55%3A0xa02859d93219da60!2sVesterbrogade%202%2C%208000%20Aarhus!5e0!3m2!1sda!2sdk!4v1684316809230!5m2!1sda!2sdk"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+
+
+</body>
+
+</html>

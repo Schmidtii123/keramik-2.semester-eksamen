@@ -1,0 +1,948 @@
+/* ----------------- root og font ----------------- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Nandinagari&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+
+:root {
+    --lysBeige: #F0ECE7;
+    --orange: #F4ab58;
+    --turkis: #B8E0E0;
+    --beige: #E3D8CA;
+}
+
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.noto {
+    font-family: 'Noto Sans Nandinagari', sans-serif;
+}
+
+.hvid {
+    color: white;
+}
+
+/* ----------------- mains ----------------- */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-color: var(--lysBeige);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100vw;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+h4 {
+    line-height: 1.4rem;
+    font-size: 14px;
+}
+
+/* ------- logo flex -------- */
+.logo_billede {
+    height: 5rem;
+    width: auto;
+}
+
+.logo {
+    margin-top: 0.35rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    direction: ltr;
+}
+
+.logo_billede {
+    width: auto;
+    height: 3rem;
+}
+
+.logo_text {
+    text-decoration: none;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+/* --------- Dropdown menu fra w3schools ----- */
+
+.dropdown {
+    position: relative;
+    display: block;
+    left: 0;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-bottom: 1px #333333 solid;
+}
+
+.dropdown a {
+    color: black;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    min-width: 100vw;
+    background-color: var(--beige);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    right: 0;
+    margin-top: 0.7rem;
+    text-align: center;
+}
+
+.dropdown_content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    border-bottom: solid 1px #333333;
+}
+
+.dropdown_content a:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+/* drowdown menu skal vise når pilen bliver trykket */
+.pil:hover .dropdown_content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--b);
+}
+
+
+
+/* ------------------------------- Forside --------------------------------- */
+.section_video {
+    position: relative;
+    height: 60vh;
+    margin-bottom: 4rem;
+}
+
+.velkommen_tekst1 {
+    font-size: 1.5rem;
+    justify-content: center;
+    display: flex;
+    margin-top: 15px;
+}
+
+.velkommen_tekst2 {
+    justify-content: center;
+    display: flex;
+}
+
+.video {
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.video_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0.5px) brightness(0.7);
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video_overlay_text {
+    position: absolute;
+    z-index: 5;
+    top: 10%;
+    color: white;
+}
+
+.box {
+    height: auto;
+    width: 10rem;
+    position: relative;
+    text-align: center;
+    margin: 0.4rem;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-basis: 50%;
+    
+}
+
+.hover:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.box_pic {
+    height: 10rem;
+    width: 100%;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    object-fit: cover;
+}
+
+.box_pic:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.box_text {
+    margin-right: -0.2rem;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------- Mød os --------------------------------- */
+.header_img {
+    height: auto;
+    padding-top: 0.5rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.faellesbillede {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.header_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.name_card {
+    display: grid;
+    justify-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.gruppe img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 80%;
+}
+
+.billede_navn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin: 0.4rem;
+}
+
+/* ---------------------------ALLE KERAMIKERNE ------------------------ */
+
+.material-icons {
+    margin-right: 8rem;
+    margin: 1rem 0 0 1rem;
+}
+
+.material-icons:hover {
+    cursor: pointer;
+}
+.overskrift_navne{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profil_billede {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+.instagram_logo {
+    width: 2rem;
+}
+
+.alle_instagram {
+    font-size: 1.3rem;
+}
+
+.alle_instagram:hover {
+    color: var(--orange);
+}
+
+.logo_navn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.om_keramiker {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.keramik_billeder {
+    width: 5rem;
+    height: auto;
+    margin-left: 0.7rem;
+}
+
+.keramik_billeder1 {
+    width: 6rem;
+    height: auto;
+}
+
+.keramik_billeder2 {
+    width: 8rem;
+    height: auto;
+}
+
+/* ---------- BOBLE BILLEDER I MIDTEN ------- */
+
+.row_billeder {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+}
+
+.row_billeder1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.billede_bobler {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* -------------------------------  Kontakt os --------------------------------- */
+
+.kontakt_os {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overskrift {
+    font-size: 2rem;
+    margin: 1rem 1rem;
+}
+
+.lokation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 1rem;
+}
+
+.lokation a:hover {
+    color: var(--orange);
+}
+
+.kontakt_instagram {
+    width: auto;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.keramikere {
+    max-width: 90%;
+    min-width: 40%;
+}
+
+.keramikere a:hover {
+    color: var(--orange);
+}
+
+.person_insta {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.person_billede {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 80%;
+    margin-right: 1rem;
+}
+
+.personlig_instagram {
+    width: auto;
+    height: 1.4rem;
+    margin-right: 0.4rem;
+}
+
+.map {
+    width: 20rem;
+    height: 15rem;
+    margin: auto;
+}
+
+/* --------------------------VORES HISTORIE ------------------------ */
+
+.midt {
+    margin: 0;
+    width: 100vh;
+}
+
+.billede_slider {
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    right: 50%;
+    margin-top: 2rem;
+    max-width: 100%;
+    text-align: center;
+    height: 33rem;
+}
+
+.mySlides {
+    object-fit: contain;
+}
+
+.slider_knapper {
+    margin-top: 1rem;
+}
+
+.slider_knapper1 {
+    margin-top: 0;
+    transform: translateY(-1rem);
+    display: flex;
+    justify-content: center;
+}
+
+.slider_knapper button,
+.slider_knapper1 button {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.om_slagter {
+    margin-left: 1rem;
+}
+
+.slider_knapper button:hover,
+.slider_knapper1 button:hover {
+    cursor: pointer;
+}
+
+/* ----------------- Workshops ----------------- */
+
+.workshop_container {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.workshop {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    max-width: 70%;
+    height: auto;
+    margin: 2rem;
+    overflow: hidden;
+    width: 28rem;
+}
+
+.workshop img {
+    min-height: 15rem;
+}
+
+/* Modal med hjælp fra w3school men ændret i for at tilpas vores */
+/* The Modal (background) */
+
+.oplysninger {
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 20rem;
+    background-color: var(--beige);
+}
+
+/* The Close Button */
+.close-1 .close-2 .close-3 .close-01 .close-02 {
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-1:hover,
+.close-1:focus .close-2:hover,
+.close-2:focus .close-3:hover,
+.close-3:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.luk_knap {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.modal_struktur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+}
+
+.modal h2 {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.tilmeld_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.5rem;
+    padding-top: 1rem;
+}
+
+.submit_knap {
+    transform: translatey(1rem);
+    background-color: var(--orange);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.submit_knap:hover {
+    cursor: pointer;
+}
+
+.input {
+    background-color: var(--lysBeige);
+}
+
+/* --------- skjuler pilene på input type=number fra w3schools.com 25/5----- */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* skjuler workshop_media indtil @media */
+.workshop_media {
+    display: none;
+}
+
+/* ----------------------------------- */
+
+.workshop h3 {
+    font-size: 30px;
+}
+
+.workshop_para1 {
+    margin-top: 4rem;
+}
+
+.workshop_overlay {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    color: white;
+}
+.afslutning{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15rem;
+    justify-content: space-around;
+}
+
+.afslutning a{
+    padding: 0.9rem;
+    background-color: var(--orange);
+    border-radius: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.workshop img {
+    max-height: 35vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.workshop_disc {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.pris_tilmeld {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    align-items: center;
+}
+
+.tilmeld {
+    background-color: var(--orange);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.tilmeld:hover {
+    cursor: pointer;
+}
+
+.review {
+    width: 100%;
+    background-color: var(--turkis);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+}
+
+.review img {
+    max-width: 9rem;
+    max-height: 9rem;
+}
+
+.showcase {
+    text-align: center;
+    height: 20rem;
+    margin-top: 2rem;
+}
+
+.showcase img {
+    height: auto;
+    max-width: 50%;
+}
+
+.showcase1 {
+    position: absolute;
+    transform: translateX(-10rem);
+}
+
+.showcase2 {
+    position: absolute;
+    transform: translatey(7rem) translateX(-4rem);
+}
+
+/* -------------------------------  Footer --------------------------------- */
+.footer {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: var(--beige);
+    height: 40rem;
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.6rem;
+    font-weight: bold;
+}
+
+.footer_instagram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_instagram a:hover {
+    color: var(--orange);
+}
+
+.footer_instagram img {
+    width: 1rem;
+    height: 100%;
+}
+
+.footer_lokation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_map {
+    height: 13rem;
+    width: 20rem;
+    width: 100%;
+    height: 100%;
+}
+
+/* ----------- 404 --------- */
+.section_video_404 {
+    position: relative;
+    height: 100vh;
+}
+
+.video_404 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.z {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 4rem;
+    margin: auto;
+}
+
+
+@media screen and (min-width: 900px) {
+
+    /* -------------------------------  Forside --------------------------------- */
+
+    .box {
+        width: 12rem;
+    }
+
+    .velkommen_tekst1 {
+        font-size: 2rem;
+    }
+
+    /* -------------------------------  ALLE KERAMIKERNE --------------------------------- */
+    .profil_billede {
+        margin-top: 4rem;
+        width: 20rem;
+        height: 20rem;
+    }
+
+
+    .om_keramiker {
+        width: 55%;
+        font-size: 1.2rem;
+    }
+
+    .row_billeder {
+        flex-direction: row;
+    }
+
+    .row_billeder1 {
+        flex-direction: row;
+    }
+
+    .keramik_billeder,
+    .keramik_billeder1,
+    .keramik_billeder2 {
+        width: 12rem;
+    }
+
+    .keramik_billeder {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .keramik_billeder1 {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .keramik_billeder2 {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    /* ------------------------------------------- Mod_os --------------------------------*/
+    .gruppe img {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 95%;
+    }
+
+    .name_card {
+        max-width: 60%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .billede_navn {
+        margin-bottom: 1rem;
+    }
+
+    .faellesbillede {
+        height: 28rem;
+        width: 100%;
+        margin: auto;
+    }
+
+    /* -------------------------------  WORKSHOPS --------------------------------- */
+
+    .workshop_media {
+        display: block;
+    }
+
+    .workshop_slider,
+    .slider_knapper1 {
+        display: none;
+    }
+
+    .modal-content {
+        width: 40%;
+    }
+    
+
+    /* -------------------------------------- Kontakt os ------------------------------------*/
+
+    .map {
+        width: 35rem;
+        height: 20rem;
+    }
+
+    .lokation {
+        font-size: 1.5rem;
+    }
+
+    .lokation span {
+        font-size: 1.5rem;
+    }
+    
+
+    /* ------------------------------------------- footer -----------------------------------*/
+    .footer {
+        flex-direction: row;
+        align-items: flex-start;
+        height: 18rem;
+        font-size: 0.9rem;
+    }
+
+    .footer h3 {
+        font-size: 1rem;
+    }
+
+
+
+}
